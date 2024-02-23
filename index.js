@@ -193,8 +193,7 @@ const start = async (opts) => {
     databaseType: 'sqlite',
     connectionString: null
   }
-  opts = Object.assign(defaults, opts)
-  console.log(opts)  
+  opts = Object.assign(defaults, opts)  
 
   // if transform is present
   if (opts.transform) {
