@@ -12,6 +12,7 @@ const args = require('yargs')
   .option('transform', { alias: 't', describe: 'Path to a JavaScript transformation function', default: process.env.COUCH_TRANSFORM ? process.env.COUCH_TRANSFORM : null })
   .option('split', { alias: 's', describe: 'Document field name used to split documents into separate tables', default: null })
   .option('query', { alias: 'q', describe: 'Use Mango Query to filter data', default: null })
+  .option('connectionString', { alias: 'cs', describe: 'connectionString', default: null })
   .help('help')
   .argv
 
