@@ -190,9 +190,11 @@ const start = async (opts) => {
     split: null,
     query: null,
     slow: false,
-    databaseType: 'sqlite'
+    databaseType: 'sqlite',
+    connectionString: null
   }
   opts = Object.assign(defaults, opts)
+  console.log(opts)  
 
   // if transform is present
   if (opts.transform) {
@@ -234,7 +236,7 @@ const start = async (opts) => {
   }
   debug('Initalise database')
   loadDatabaseDriver(opts)
-  await sqldb.initialise(opts.reset)
+  await sqldb.initialise(opts)
 
   // seeing where we got to last time
   if (!opts.reset) {
